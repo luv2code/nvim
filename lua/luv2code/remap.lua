@@ -1,5 +1,7 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>yy", "\"+y")
+vim.keymap.set("n", "<leader>yp", "\"+p")
+vim.keymap.set("n", "<leader>ep", vim.cmd.Ex)
 
 vim.keymap.set("n", "<leader>ts", function () 
     vim.opt.tabstop = 2
