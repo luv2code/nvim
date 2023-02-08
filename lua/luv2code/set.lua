@@ -25,3 +25,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@") -- what does this do?
 
 vim.opt.updatetime = 50
+
+-- do not overwrite contents of unamed buffer when pasting over a selection
+vim.keymap.set("x", "p", function() return 'pgv"' .. vim.v.register .. "y" end, { remap = false, expr = true })
