@@ -26,5 +26,8 @@ vim.opt.isfname:append("@-@") -- fixes problems with '@' in filenames https://gi
 
 vim.opt.updatetime = 50
 
+vim.g.netrw_banner=0 -- default file explorer to tree view
+vim.g.netrw_liststyle=3 -- default file explorer to tree view
+
 -- do not overwrite contents of unamed buffer when pasting over a selection
 vim.keymap.set("x", "p", function() return 'pgv"' .. vim.v.register .. "y" end, { remap = false, expr = true })
