@@ -22,7 +22,7 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@") -- what does this do?
+vim.opt.isfname:append("@-@") -- fixes problems with '@' in filenames https://github.com/neovim/neovim/issues/17059
 
 vim.opt.updatetime = 50
 
