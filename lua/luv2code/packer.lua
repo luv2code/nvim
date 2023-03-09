@@ -16,7 +16,6 @@ return require('packer').startup(function(use)
   use 'preservim/nerdcommenter'
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use 'tpope/vim-fugitive'
-  use 'fatih/vim-go'
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
@@ -38,4 +37,14 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
+  use {
+    'ray-x/go.nvim',
+    requires = {
+      { 'mfussenegger/nvim-dap' },
+      { 'rcarriga/nvim-dap-ui' },
+      { 'theHamsta/nvim-dap-virtual-text' },
+      { 'nvim-telescope/telescope-dap.nvim' },
+      { 'ray-x/guihua.lua'}, -- recommended if need floating window support
+    }
+  }
 end)

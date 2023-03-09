@@ -1,3 +1,3 @@
 GuiRenderLigatures 1
-GuiFont JetBrains Mono:h14
+GuiFont JetBrainsMono Nerd Font Mono:h14
 GuiWindowOpacity 0.9

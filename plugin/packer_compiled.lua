@@ -109,6 +109,16 @@ _G.packer_plugins = {
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/home/matt/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/home/matt/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -139,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/matt/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -168,11 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-go"] = {
-    loaded = true,
-    path = "/home/matt/.local/share/nvim/site/pack/packer/start/vim-go",
-    url = "https://github.com/fatih/vim-go"
   }
 }
 
