@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set({"n", "v"}, "<leader>y", "\"+y") -- yank to clipboard
 vim.keymap.set({"n", "v"}, "<leader>p", "\"+p") -- paste from clipboard
-vim.keymap.set({"n", "v"}, "<leader>ep", vim.cmd.Ex) -- explorer project
+--vim.keymap.set({"n", "v"}, "<leader>ep", vim.cmd.Ex) -- explorer project
+vim.keymap.set({"n", "v"}, "<leader>n", ":NvimTreeToggle<cr>")
 
 vim.keymap.set({"n", "v"}, "<leader>qq", ":ccl<cr>") -- quickfix keymaps
 vim.keymap.set({"n", "v"}, "<leader>qn", ":cn<cr>")

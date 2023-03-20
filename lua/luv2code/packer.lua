@@ -47,4 +47,6 @@ return require('packer').startup(function(use)
       { 'ray-x/guihua.lua'}, -- recommended if need floating window support
     }
   }
+  use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-tree/nvim-web-devicons'
 end)
