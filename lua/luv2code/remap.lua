@@ -36,3 +36,5 @@ vim.keymap.set("n", "<leader>tl", function ()
     vim.opt.shiftwidth = 4
     vim.opt.expandtab = true
 end)
+
+vim.keymap.set("i", "<A-cr>", "<Esc>A;<cr>")
