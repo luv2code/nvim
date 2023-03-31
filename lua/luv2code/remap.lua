@@ -17,6 +17,7 @@ vim.keymap.set({"n", "v"}, "<C-h>", "<C-w>h")
 -- Buffer navigation
 vim.keymap.set({"n", "v"}, "<leader>k", ":bnext<cr>")
 vim.keymap.set({"n", "v"}, "<leader>j", ":bprevious<cr>")
+vim.keymap.set({"n", "v"}, "<leader>d", ":bdelete<cr>")
 
 -- Tab navigation
 vim.keymap.set({"n", "v"}, "<leader>l", ":tabnext<cr>")
