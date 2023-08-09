@@ -26,6 +26,7 @@ vim.keymap.set({"n", "v"}, "<leader>h", ":tabprevious<cr>")
 -- Go Tools
 vim.keymap.set({"n", "v"}, "<leader>gl", ":GoLint<cr>")
 vim.keymap.set({"n", "v"}, "<leader>gm", ":GoRename<cr>")
+vim.keymap.set({"n", "v"}, "<leader>gt", ":GoFmt<cr>")
 
 
 vim.keymap.set("n", "<leader>ts", function ()
