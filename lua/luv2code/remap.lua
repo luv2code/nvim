@@ -24,12 +24,6 @@ vim.keymap.set({"n", "v"}, "<leader>;", ":b#<cr>")
 vim.keymap.set({"n", "v"}, "<leader>l", ":tabnext<cr>")
 vim.keymap.set({"n", "v"}, "<leader>h", ":tabprevious<cr>")
 
--- Go Tools
-vim.keymap.set({"n", "v"}, "<leader>gl", ":GoLint<cr>")
-vim.keymap.set({"n", "v"}, "<leader>gm", ":GoRename<cr>")
-vim.keymap.set({"n", "v"}, "<leader>gt", ":GoFmt<cr>")
-vim.keymap.set({"n", "v"}, "<leader>o", ":GoDoc<cr>")
-
 vim.keymap.set("n", "<leader>ts", function ()
     -- tab small
     vim.opt.tabstop = 2
