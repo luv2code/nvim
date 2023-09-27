@@ -59,7 +59,8 @@ return require('packer').startup(function(use)
   })
   use "lukas-reineke/indent-blankline.nvim"
   use {
-    'nvim-lualine/lualine.nvim',
+    'luv2code/lualine.nvim',
+    branch = 'bufjumpnext',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 end)
