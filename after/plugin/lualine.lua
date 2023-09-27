@@ -52,6 +52,6 @@ require('lualine').setup {
 }
 
 for bufnum=1,9 do
-  vim.keymap.set({"n", "v", "i"}, "<C-" .. bufnum .. ">", ":LualineBuffersJump " .. bufnum .. "<cr>")
+  vim.keymap.set({"n", "v", "i"}, "<C-" .. bufnum .. ">", ":LualineBuffersJump! " .. bufnum .. "<cr>")
 end
-vim.keymap.set({"n", "v", "i"}, "<C> 0", ":LualineBuffersJump 10<cr>")
+vim.keymap.set({"n", "v", "i"}, "<C> 0", ":LualineBuffersJump! 10<cr>")
