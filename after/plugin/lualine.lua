@@ -54,5 +54,3 @@ require('lualine').setup {
 for bufnum=1,9 do
   vim.keymap.set({"n", "v"}, "<C-" .. bufnum .. ">", ":LualineBuffersJump! " .. bufnum .. "<cr>")
 end
-vim.keymap.set({"n", "v"}, "<Leader><Tab>", ":LualineBuffersNext<cr>")
-vim.keymap.set({"n", "v"}, "<Leader><S-Tab>", ":LualineBuffersPrev<cr>")
