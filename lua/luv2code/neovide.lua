@@ -1,0 +1,7 @@
+if vim.g.neovide then
+	vim.g.neovide_cursor_animation_length = 0.01
+	vim.g.neovide_cursor_trail_size = 0.7
+	vim.o.guifont = "JetBrainsMono Nerd Font Mono:h16"
+	vim.g.neovide_transparency = 0.9
+	--vim.api.nvim_set_current_dir('/home/matt/projects/')
+end
