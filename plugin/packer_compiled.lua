@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tree-sitter-templ"] = {
+    loaded = true,
+    path = "/home/matt/.local/share/nvim/site/pack/packer/start/tree-sitter-templ",
+    url = "https://github.com/vrischmann/tree-sitter-templ"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/matt/.local/share/nvim/site/pack/packer/start/vim-fugitive",

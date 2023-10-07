@@ -9,6 +9,7 @@ lsp.ensure_installed({
   'html',
   'clangd',
   'cssls',
+	'templ',
 })
 lsp.nvim_workspace()
 

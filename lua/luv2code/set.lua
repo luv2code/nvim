@@ -42,3 +42,10 @@ vim.keymap.set("x", "p", function() return 'pgv"' .. vim.v.register .. "y" end, 
 
 -- comments in italics
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
+
+-- additional filetypes
+vim.filetype.add({
+    extension = {
+        templ = "templ",
+    },
+})
