@@ -30,20 +30,23 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@") -- fixes problems with '@' in filenames https://github.com/neovim/neovim/issues/17059
+vim.opt.isfname:append("@-@") -- fixes problems with '@' in file names HTTPS://github.com/neovim/neovim/issues/17059
 
 vim.opt.updatetime = 50
+
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
 
 vim.g.netrw_banner=0 -- default file explorer to tree view
 vim.g.netrw_liststyle=3 -- default file explorer to tree view
 
--- do not overwrite contents of unamed buffer when pasting over a selection
+-- do not overwrite contents of unnamed buffer when pasting over a selection
 vim.keymap.set("x", "p", function() return 'pgv"' .. vim.v.register .. "y" end, { remap = false, expr = true })
 
 -- comments in italics
 vim.api.nvim_set_hl(0, 'Comment', { italic=true })
 
--- additional filetypes
+-- additional file types
 vim.filetype.add({
     extension = {
         templ = "templ",
