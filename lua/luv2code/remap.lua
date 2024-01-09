@@ -4,6 +4,10 @@ vim.keymap.set({"n", "v"}, "<leader>p", "\"+p") -- paste from clipboard
 --vim.keymap.set({"n", "v"}, "<leader>ep", vim.cmd.Ex) -- explorer project
 vim.keymap.set({"n", "v"}, "<leader>n", ":NvimTreeToggle<cr>")
 
+-- move current highlighted line(s) up or down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 vim.keymap.set({"n", "v"}, "<leader>qq", ":ccl<cr>") -- quickfix keymaps
 vim.keymap.set({"n", "v"}, "<leader>qn", ":cn<cr>")
 vim.keymap.set({"n", "v"}, "<leader>qp", ":cp<cr>")
