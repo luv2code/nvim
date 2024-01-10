@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
     config = function()
       require("nvim-surround").setup({
         -- Configuration here, or leave empty to use defaults
+				triggers_nowait = {}
       })
     end
   })
@@ -64,14 +65,16 @@ return require('packer').startup(function(use)
   }
 	-- templ
 	use("vrischmann/tree-sitter-templ")
-	-- Lua
-	use {
-		"folke/which-key.nvim",
-		config = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 300
-			require("which-key").setup {
-			}
-		end
-	}
+	---- which-key
+	--use { 
+		 ---- commented out because it effected gd (goto definition)
+		 ---- perhaps setting triggers_nowait will fix because the LSP doesn't hook immediately?
+		--"folke/which-key.nvim",
+		--config = function()
+			--vim.o.timeout = true
+			--vim.o.timeoutlen = 500
+			--require("which-key").setup {
+			--}
+		--end
+	--}
 end)
