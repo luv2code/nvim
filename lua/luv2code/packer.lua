@@ -65,6 +65,17 @@ return require('packer').startup(function(use)
   }
 	-- templ
 	use("vrischmann/tree-sitter-templ")
+	-- copilot
+	use { 
+		"zbirenbaum/copilot.lua",
+		config = function()
+			require('copilot').setup({
+				suggestion = {
+					auto_trigger = true
+				}
+			})
+		end
+	}
 	---- which-key
 	--use { 
 		 ---- commented out because it effected gd (goto definition)
