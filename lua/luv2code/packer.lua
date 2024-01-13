@@ -70,10 +70,15 @@ return require('packer').startup(function(use)
 		"zbirenbaum/copilot.lua",
 		config = function()
 			require('copilot').setup({
-				suggestion = {
-					auto_trigger = true
-				}
+				suggestion = { enabled = false },
+				panel = { enabled = false },
 			})
+		end
+	}
+	use {
+		"zbirenbaum/copilot-cmp",
+		config = function()
+				require("copilot_cmp").setup()
 		end
 	}
 	---- which-key
