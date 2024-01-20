@@ -81,6 +81,12 @@ return require('packer').startup(function(use)
 				require("copilot_cmp").setup()
 		end
 	}
+	use {
+			"robitx/gp.nvim",
+			config = function()
+					require("gp").setup()
+			end,
+	}
 	---- which-key
 	--use { 
 		 ---- commented out because it effected gd (goto definition)
