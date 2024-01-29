@@ -84,7 +84,10 @@ return require('packer').startup(function(use)
 	use {
 			"robitx/gp.nvim",
 			config = function()
+				if os.getenv("OPENAI_API_KEY") ~= nil then
 					require("gp").setup()
+					return
+				end
 			end,
 	}
 	---- which-key
