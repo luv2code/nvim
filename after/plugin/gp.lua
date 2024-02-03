@@ -1,7 +1,3 @@
-if os.getenv("OPENAI_API_KEY") == nil then
-	return
-end
-
 local function keymapOptions(desc)
     return {
         noremap = true,
@@ -13,6 +9,7 @@ end
 
 local gp = require("gp")
 local config = {
+	openai_api_key = { "cat", vim.fn.expand("~/.open-api-key") },
 }
 gp.setup(config)
 
