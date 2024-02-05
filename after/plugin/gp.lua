@@ -9,7 +9,7 @@ end
 
 local gp = require("gp")
 local config = {
-	openai_api_key = { "cat", vim.fn.expand("~/.open-api-key") },
+	openai_api_key = { "cat", vim.fn.expand("~/.openai-api-key") },
 }
 gp.setup(config)
 
