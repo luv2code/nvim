@@ -7,6 +7,7 @@ lsp.ensure_installed({
   'gopls',
   'tailwindcss',
   'html',
+  'htmx',
   'clangd',
   'cssls',
 	'templ',
@@ -23,3 +24,9 @@ lsp.on_attach(function(client)
 end)
 
 lsp.setup()
+
+local lspconfig = require('lspconfig')
+lspconfig.tailwindcss.setup({
+    filetypes = { "templ", "javascript", "typescript", "react" },
+    init_options = { userLanguages = { templ = "html" } },
+})
