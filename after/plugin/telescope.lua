@@ -1,3 +1,7 @@
+local telescope = require("telescope")
+telescope.setup()
+telescope.load_extension("git_file_history")
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader><space>', builtin.find_files, {})
@@ -11,3 +15,4 @@ vim.keymap.set('n', '<leader>fm', builtin.marks, {})
 vim.keymap.set('n', '<leader>fs', function ()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
+vim.keymap.set('n', '<leader>fk', telescope.extensions.git_file_history.git_file_history, {})

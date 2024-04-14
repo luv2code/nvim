@@ -9,7 +9,10 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use {
     'nvim-telescope/telescope.nvim', branch = 'master', --tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {
+			{'nvim-lua/plenary.nvim'},
+			{'isak102/telescope-git-file-history.nvim', requires = {'tpope/vim-fugitive'} },
+		}
   }
   use 'Yazeed1s/minimal.nvim'
   use 'preservim/nerdcommenter'
@@ -66,7 +69,7 @@ return require('packer').startup(function(use)
 	-- templ
 	use("vrischmann/tree-sitter-templ")
 	-- copilot
-	use { 
+	use {
 		"zbirenbaum/copilot.lua",
 		config = function()
 			require('copilot').setup({
