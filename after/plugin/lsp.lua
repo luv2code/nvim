@@ -1,19 +1,5 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'rust_analyzer',
-  'gopls',
-  'tailwindcss',
-  'html',
-  'htmx',
-  'clangd',
-  'cssls',
-	'templ',
-})
-lsp.nvim_workspace()
-
 lsp.on_attach(function(client)
   if client.name == "omnisharp" then
     client.server_capabilities.semanticTokensProvider.legend = {
@@ -25,8 +11,32 @@ end)
 
 lsp.setup()
 
-local lspconfig = require('lspconfig')
-lspconfig.tailwindcss.setup({
-    filetypes = { "templ", "javascript", "typescript", "react" },
-    init_options = { userLanguages = { templ = "html" } },
+require('mason').setup({})
+require('mason-lspconfig').setup({
+	ensure_installed = {
+		'tsserver',
+		'eslint',
+		'rust_analyzer',
+		'gopls',
+		'tailwindcss',
+		'html',
+		'htmx',
+		'clangd',
+		'cssls',
+		'templ',
+	},
+	handlers = {
+		function(server_name)
+			require('lspconfig')[server_name].setup({})
+		end,
+		gopls = function ()
+			require('lspconfig').gopls.setup(require('go.lsp').config())
+		end,
+		tailwindcss = function ()
+			require('lspconfig').tailwindcss.setup({
+					filetypes = { "templ", "javascript", "typescript", "react" },
+					init_options = { userLanguages = { templ = "html" } },
+			})
+		end,
+	},
 })
