@@ -16,6 +16,7 @@ require('mason-lspconfig').setup({
 	ensure_installed = {
 		'tsserver',
 		'eslint',
+		'lua_ls',
 		'rust_analyzer',
 		'gopls',
 		'tailwindcss',
@@ -37,6 +38,10 @@ require('mason-lspconfig').setup({
 					filetypes = { "templ", "javascript", "typescript", "react" },
 					init_options = { userLanguages = { templ = "html" } },
 			})
+		end,
+		lua_ls = function ()
+			local lua_opts = lsp.nvim_lua_ls()
+			require('lspconfig').lua_ls.setup(lua_opts)
 		end,
 	},
 })
