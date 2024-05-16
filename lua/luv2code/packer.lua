@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
 		}
   }
   use 'Yazeed1s/minimal.nvim'
-  use 'preservim/nerdcommenter'
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use 'tpope/vim-fugitive'
   use {

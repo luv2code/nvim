@@ -28,6 +28,7 @@ vim.keymap.set({"n", "v"}, "<leader>;", ":b#<cr>")
 vim.keymap.set({"n", "v"}, "<leader>l", ":tabnext<cr>")
 vim.keymap.set({"n", "v"}, "<leader>h", ":tabprevious<cr>")
 
+-- setting indentation
 vim.keymap.set("n", "<leader>ts", function ()
     -- tab small
     vim.opt.tabstop = 2
@@ -43,4 +44,5 @@ vim.keymap.set("n", "<leader>tl", function ()
     vim.opt.expandtab = true
 end)
 
+-- Alt-Enter puts a semicolon at the end of the current line and starts a new line.
 vim.keymap.set("i", "<A-cr>", "<Esc>A;<cr>")
