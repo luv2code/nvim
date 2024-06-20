@@ -13,6 +13,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   group = format_sync_grp,
 })
 
+vim.cmd(
+	[[command! GoLintEx        :setl makeprg=golangci-lint\ run\ --print-issued-lines=false\ --exclude-use-default=true\ --out-format=line-number | :GoMake]]
+)
+
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 -- 	pattern = { "*.templ" },
 -- 	callback = function()
