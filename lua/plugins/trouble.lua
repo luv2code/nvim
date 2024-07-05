@@ -21,13 +21,32 @@
 -- }
 return {
   "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  opts = {
+		modes = {
+			symbols = {
+				win = {
+					position = "right",
+					size = 0.3,
+				},
+			},
+		},
+	},
   cmd = "Trouble",
   keys = {
     {
       "<leader>xx",
       "<cmd>Trouble diagnostics toggle<cr>",
       desc = "Diagnostics (Trouble)",
+    },
+    {
+      "<leader>xn",
+      "<cmd>Trouble next skip_groups=true jump=true<cr>",
+      desc = "Next diagnostics (Trouble)",
+    },
+    {
+      "<leader>xp",
+      "<cmd>Trouble prev skip_groups=true jump=true<cr>",
+      desc = "Previous diagnostics (Trouble)",
     },
     {
       "<leader>xX",
