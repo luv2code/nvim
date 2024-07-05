@@ -9,8 +9,20 @@ return {
 	},
 
 	config = function()
+
+		-- Use this to add more results without clearing the trouble list
+		local add_to_trouble = require("trouble.sources.telescope").add
+		local open_with_trouble = require("trouble.sources.telescope").open
+
 		local telescope = require("telescope")
-		telescope.setup({})
+		telescope.setup({
+			defaults = {
+				mappings = {
+					i = { ["<c-t>"] = open_with_trouble },
+					n = { ["<c-t>"] = open_with_trouble },
+				},
+			},
+		})
 		telescope.load_extension("git_file_history")
 
 		local builtin = require('telescope.builtin')
