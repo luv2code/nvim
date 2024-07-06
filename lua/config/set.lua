@@ -43,9 +43,6 @@ vim.g.netrw_liststyle=3 -- default file explorer to tree view
 -- do not overwrite contents of unnamed buffer when pasting over a selection
 vim.keymap.set("x", "p", function() return 'pgv"' .. vim.v.register .. "y" end, { remap = false, expr = true })
 
--- comments in italics
-vim.api.nvim_set_hl(0, 'Comment', { italic=true })
-
 -- additional file types
 vim.filetype.add({
     extension = {
