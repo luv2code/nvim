@@ -73,5 +73,10 @@ return {
       "<cmd>Trouble qflist toggle<cr>",
       desc = "Quickfix List (Trouble)",
     },
+    {
+      "<leader>xT",
+      "<cmd>Trouble telescope toggle<cr>",
+      desc = "Telescope List (Trouble)",
+    },
   },
 }
