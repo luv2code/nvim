@@ -44,3 +44,6 @@ vim.keymap.set("n", "<leader>tl", largeTabStop)
 
 -- Alt-Enter puts a semicolon at the end of the current line and starts a new line.
 vim.keymap.set("i", "<A-cr>", "<Esc>A;<cr>")
+
+-- run code lens 
+vim.keymap.set("n", "grl", ":lua vim.lsp.codelens.run()<cr>")
