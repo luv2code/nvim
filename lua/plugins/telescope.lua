@@ -18,8 +18,8 @@ return {
 		telescope.setup({
 			defaults = {
 				mappings = {
-					i = { ["<c-t>"] = open_with_trouble },
-					n = { ["<c-t>"] = open_with_trouble },
+					i = { ["<c-t>"] = open_with_trouble, ["<c-a>"] = add_to_trouble },
+					n = { ["<c-t>"] = open_with_trouble, ["<c-a>"] = add_to_trouble  },
 				},
 			},
 		})
