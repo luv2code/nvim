@@ -1,3 +1,14 @@
+local function get_scrollbar()
+
+    local sbar_chars = { '▔', '🭶', '🭷', '🭸', '🭹', '🭺', '🭻', '▁' }
+    -- local sbar_chars = { '▔', '🮂', '🮃', '🮑', '🮒', '▃', '▂', '▁' }
+    local cur_line = vim.api.nvim_win_get_cursor(0)[1]
+    local lines = vim.api.nvim_buf_line_count(0)
+    local i = math.floor((cur_line - 1) / lines * #sbar_chars) + 1
+    local sbar = string.rep(sbar_chars[i], 1)
+    return sbar
+end
+
 return {
 	'nvim-lualine/lualine.nvim',
 	dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -31,7 +42,7 @@ return {
 				lualine_b = {'branch', 'diff', 'diagnostics'},
 				lualine_c = {{'filename', path = 1}},
 				lualine_x = {'encoding', 'fileformat', 'filetype'},
-				lualine_y = {'progress'},
+				lualine_y = {get_scrollbar},
 				lualine_z = {'location'}
 			},
 			inactive_sections = {
