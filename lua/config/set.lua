@@ -34,8 +34,8 @@ vim.opt.isfname:append("@-@") -- fixes problems with '@' in file names HTTPS://g
 
 vim.opt.updatetime = 50
 
-vim.opt.spelllang = 'en_us'
-vim.opt.spell = true
+-- vim.opt.spelllang = 'en_us'
+-- vim.opt.spell = true
 
 vim.g.netrw_banner=0 -- default file explorer to tree view
 vim.g.netrw_liststyle=3 -- default file explorer to tree view
