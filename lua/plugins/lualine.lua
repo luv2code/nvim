@@ -32,9 +32,9 @@ return {
 				always_divide_middle = true,
 				globalstatus = false,
 				refresh = {
-					statusline = 1000,
-					tabline = 1000,
-					winbar = 1000,
+					statusline = 100,
+					tabline = 100,
+					winbar = 100,
 				}
 			},
 			sections = {
@@ -65,7 +65,6 @@ return {
 			inactive_winbar = {},
 			extensions = {}
 		}
-		vim.api.nvim_create_autocmd('BufEnter', {callback=require('lualine').refresh})
 		for bufnum=1,9 do
 			vim.keymap.set({"n", "v"}, "<C-" .. bufnum .. ">", ":LualineBuffersJump! " .. bufnum .. "<cr>")
 		end
