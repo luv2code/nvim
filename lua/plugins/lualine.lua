@@ -65,7 +65,7 @@ return {
 			inactive_winbar = {},
 			extensions = {}
 		}
-
+		vim.api.nvim_create_autocmd('BufEnter', {callback=require('lualine').refresh})
 		for bufnum=1,9 do
 			vim.keymap.set({"n", "v"}, "<C-" .. bufnum .. ">", ":LualineBuffersJump! " .. bufnum .. "<cr>")
 		end
