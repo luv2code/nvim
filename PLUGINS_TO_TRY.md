@@ -1,5 +1,5 @@
+- https://github.com/jackMort/ChatGPT.nvim - chatgpt completions a la copilot
 - https://github.com/machakann/vim-swap - swap function arguments around with a keystroke.
 - https://github.com/kylechui/nvim-surround - improved surround. It's a bit more intelligent than regular surround.
 - https://github.com/folke/persistence.nvim - restore last session
 - https://github.com/rachartier/tiny-code-action.nvim - run code actions from telescope
-- https://github.com/maxandron/goplements.nvim - In go, shows inline text to show what interfaces are implemented/by
