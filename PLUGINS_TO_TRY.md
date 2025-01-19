@@ -1,3 +1,4 @@
+- https://github.com/frankroeder/parrot.nvim - more than just completions.
 - https://github.com/jackMort/ChatGPT.nvim - chatgpt completions a la copilot
 - https://github.com/machakann/vim-swap - swap function arguments around with a keystroke.
 - https://github.com/kylechui/nvim-surround - improved surround. It's a bit more intelligent than regular surround.
