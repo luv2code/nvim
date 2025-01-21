@@ -1,0 +1,24 @@
+return {}
+-- local function read_file(path)
+--     local file = io.open(path, "rb") -- r read mode and b binary mode
+--     if not file then return nil end
+--     local content = file:read "*a" -- *a or *all reads the whole file
+--     file:close()
+--     return content
+-- end
+--
+-- return {
+--   "frankroeder/parrot.nvim",
+--   dependencies = { 'ibhagwan/fzf-lua', 'nvim-lua/plenary.nvim' },
+--   -- optionally include "rcarriga/nvim-notify" for beautiful notifications
+--   config = function()
+--     require("parrot").setup {
+--       -- Providers must be explicitly added to make them available.
+--       providers = {
+--         openai = {
+--           api_key = read_file(vim.fn.expand("~/.openai-api-key")),
+--         },
+--       },
+--     }
+--   end,
+-- }
