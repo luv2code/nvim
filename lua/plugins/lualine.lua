@@ -1,7 +1,5 @@
 local function get_scrollbar()
-
     local sbar_chars = { '▔', '🭶', '🭷', '🭸', '🭹', '🭺', '🭻', '▁' }
-    -- local sbar_chars = { '▔', '🮂', '🮃', '🮑', '🮒', '▃', '▂', '▁' }
     local cur_line = vim.api.nvim_win_get_cursor(0)[1]
     local lines = vim.api.nvim_buf_line_count(0)
     local i = math.floor((cur_line - 1) / lines * #sbar_chars) + 1
