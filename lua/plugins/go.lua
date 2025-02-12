@@ -10,6 +10,7 @@ return {
   config = function()
     require("go").setup({
 			icons = {breakpoint = '🛑', currentpos = ''},
+			lsp_gofumpt = true,
 		})
 
 		local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
@@ -17,7 +18,7 @@ return {
 		vim.api.nvim_create_autocmd("BufWritePre", {
 			pattern = "*.go",
 			callback = function()
-			 require('go.format').goimport()
+			  vim.lsp.buf.format()
 			end,
 			group = format_sync_grp,
 		})
