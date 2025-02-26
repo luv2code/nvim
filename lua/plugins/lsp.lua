@@ -37,7 +37,6 @@ return {
 				"gopls",
 				"tailwindcss",
 				"html",
-				"htmx",
 				"clangd",
 				"cssls",
 				"templ",
