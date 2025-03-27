@@ -70,6 +70,11 @@ return {
 						init_options = { userLanguages = { templ = "html" } },
 					})
 				end,
+				["terraformls"] = function ()
+					require('lspconfig').terraformls.setup {
+						cmd = { 'terraform-ls', 'serve', '-log-file', '/dev/null' },
+					}
+				end,
 			}
 		})
 
