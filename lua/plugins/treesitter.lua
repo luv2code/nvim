@@ -1,6 +1,9 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
+	dependencies = {
+		"OXY2DEV/markview.nvim",
+	},
 	config = function()
 		require("nvim-treesitter.configs").setup({
 			-- A list of parser names, or "all"
