@@ -6,6 +6,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"isak102/telescope-git-file-history.nvim",
+    "debugloop/telescope-undo.nvim",
 	},
 
 	config = function()
@@ -24,6 +25,7 @@ return {
 			},
 		})
 		telescope.load_extension("git_file_history")
+    telescope.load_extension("undo")
 
 		local builtin = require('telescope.builtin')
     local function grep()
@@ -40,5 +42,6 @@ return {
 		vim.keymap.set('n', '<leader>fm', builtin.marks, {})
 		vim.keymap.set('n', '<leader>fs', grep)
 		vim.keymap.set('n', '<leader>fk', telescope.extensions.git_file_history.git_file_history, {})
+    vim.keymap.set("n", "<leader>fu", "<cmd>Telescope undo<cr>")
 	end
 }
