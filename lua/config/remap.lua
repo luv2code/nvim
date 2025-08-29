@@ -47,3 +47,8 @@ vim.keymap.set("i", "<A-cr>", "<Esc>A;<cr>")
 
 -- run code lens 
 vim.keymap.set("n", "grl", ":lua vim.lsp.codelens.run()<cr>")
+
+-- lsp keybinds
+vim.keymap.set("n", "<leader>ls", ":lua vim.diagnostic.show()<cr>")
+vim.keymap.set("n", "<leader>lh", ":lua vim.diagnostic.hide()<cr>")
+vim.keymap.set("n", "<leader>lf", ":lua vim.diagnostic.open_float()<cr>")
