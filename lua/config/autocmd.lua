@@ -12,7 +12,7 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = {"markdown", "text"},
     callback = function()
         vim.wo.wrap = true
-        vim.wo.textwidth = 100
-				vim.wo.formatoptions = vim.wo.formatoptions .. "t"
+				vim.bo.formatoptions = vim.bo.formatoptions .. "t"
+        vim.bo.textwidth = 100
     end
 })
