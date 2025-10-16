@@ -7,12 +7,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 	group = format_sync_grp,
 })
-
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = {"markdown", "text"},
-    callback = function()
-        vim.wo.wrap = true
-				vim.bo.formatoptions = vim.bo.formatoptions .. "t"
-        vim.bo.textwidth = 100
-    end
-})
