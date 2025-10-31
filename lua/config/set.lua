@@ -45,7 +45,7 @@ vim.keymap.set("x", "p", function() return 'pgv"' .. vim.v.register .. "y" end, 
 
 -- additional file types
 vim.filetype.add({
-    extension = {
-        templ = "templ",
-    },
+	extension = {
+		templ = "templ",
+	},
 })
