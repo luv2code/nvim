@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWrite" }, {
   group = vim.api.nvim_create_augroup("CustomShebangDetection", {}),
   desc = "Set the filetype based on the shebang header",
   callback = function()
