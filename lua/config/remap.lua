@@ -52,3 +52,6 @@ vim.keymap.set("n", "grl", ":lua vim.lsp.codelens.run()<cr>")
 vim.keymap.set("n", "<leader>ls", ":lua vim.diagnostic.show()<cr>")
 vim.keymap.set("n", "<leader>lh", ":lua vim.diagnostic.hide()<cr>")
 vim.keymap.set("n", "<leader>lf", ":lua vim.diagnostic.open_float()<cr>")
+
+-- markview taggole
+vim.keymap.set("n", "<leader>m", "<CMD>Markview<cr>",{ desc = "Toggles `markview` previews globally." });
