@@ -9,4 +9,4 @@ vim.keymap.set({"n", "v"}, "<leader>o", ":GoDoc<cr>", ko)
 vim.keymap.set({"n", "v"}, "<leader>ta", ":GoTest<cr>", ko)
 vim.keymap.set({"n", "v"}, "<leader>tt", ":GoTestFile<cr>", ko)
 vim.keymap.set({"n", "v"}, "<leader>tf", ":GoTestFunc<cr>", ko)
-
+vim.treesitter.start()
