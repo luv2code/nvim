@@ -7,7 +7,7 @@ return {
 		require('nvim-treesitter').install {
 			"vimdoc", "javascript", "typescript", "c", "lua", "rust",
 			"jsdoc", "bash", "go", "html", "markdown_inline", "markdown",
-			"yaml", "templ",
+			"yaml", "templ", "latex", "typst",
 		}
 	end
 -- 	"nvim-treesitter/nvim-treesitter",
